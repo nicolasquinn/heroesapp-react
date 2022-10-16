@@ -26,18 +26,18 @@ export const HeroCard = ({
 
                 <div className="card-body">
 
-                    <h5 className="card-title">{ superhero }</h5>
+                    <h5 className="card-title fw-bold">{ superhero }</h5>
                     <p className="card-text">{ alterEgo }</p>
-                    { ( characters !== alterEgo ) && <p>{ characters }</p> }
+                    { ( characters !== alterEgo ) && <p className="fw-" >{ characters }</p> } 
 
                     <p className="card-text">
                         <small className="text-muted">{ firstAppearance }</small>
                     </p>
 
                     <Link to={`/hero/${id}`}>
-                        ...More
+                        More
                     </Link>
-                    
+
                 </div>
 
             </div>
