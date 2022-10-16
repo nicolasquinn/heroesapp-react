@@ -27,6 +27,7 @@ export const Navbar = () => {
                     >
                         DC
                     </NavLink>
+
                 </div>
             </div>
 
