@@ -24,11 +24,11 @@ export const HeroPage = () => {
         <img 
         src={ `/assets/heroes/${id}.jpg` } 
         alt={ hero.superhero } 
-        className="img-thumbnail" 
+        className="img-thumbnail border border-primary rounded-4 border-4 animate__animated animate__fadeInLeft" 
         />
       </div>
 
-      <div className="col-8">
+      <div className="col-8 animate__animated animate__fadeInUp">
         <h3 className="fw-bold">{ hero.superhero }</h3>
         <ul className="list-group list-group-flush">
           <li className="list-group-item"> <b>Publisher:</b> { hero.publisher }</li>
