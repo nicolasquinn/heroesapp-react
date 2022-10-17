@@ -15,12 +15,8 @@ export const SearchPage = () => {
   const { searchText, onInputChange } = useForm({ searchText : q });
 
   const onFormSubmit = (e) => {
-
     e.preventDefault();
-    if ( searchText.trim().length <= 1 ) return;
-
     navigate(`?q=${ searchText }`);
-    
   }
 
   return (
@@ -57,13 +53,9 @@ export const SearchPage = () => {
           <h4>Results</h4>
           <hr />
 
-          <div className="alert alert-primary">
-            Search a hero!
-          </div>
+          { ( q === '' ) && ( <div className="alert alert-primary animate__animated animate__fadeIn">Search a hero!</div> ) }
 
-          <div className="alert alert-danger">
-            We couldn't find the hero <b>{ q }</b>, try with another one.
-          </div>
+          { ( heroes.length === 0 && q ) && ( <div className="alert alert-danger animate__animated animate__fadeIn"> We couldn't find the hero <b>{ q }</b>, try with another one. </div> ) }
 
           {
             heroes.map( (hero) => (
