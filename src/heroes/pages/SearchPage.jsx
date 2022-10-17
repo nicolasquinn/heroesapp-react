@@ -21,13 +21,13 @@ export const SearchPage = () => {
 
   return (
     <>
-      <h1>Search</h1>
+      <h1 className="mt-2">Search</h1>
       <hr />
 
       <div className="row">
         <div className="col-5">
 
-          <h4>Searching</h4>
+          <h4>Find a hero by his name</h4>
           <hr />
 
           <form onSubmit={ onFormSubmit }>

@@ -14,15 +14,15 @@ export const HeroCard = ({
 
   return (
     <div className="col animate__animated animate__fadeIn">
-        <div className="card">
+        <div className="card rounded-4">
 
             <div className="row no-gutter">
-                <div className="col-4" >
-                    <img src={ heroImgUrl } alt={ superhero } className="card-img"/>
+                <div className="col-5" >
+                    <img src={ heroImgUrl } alt={ superhero } className="card-img rounded-4 p-1"/>
                 </div>
             </div>
 
-            <div className="col-8">
+            <div className="col-7">
 
                 <div className="card-body">
 

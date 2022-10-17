@@ -14,7 +14,7 @@ export const HeroPage = () => {
   }
 
   const onNavigateBack = () => {
-    id.includes('marvel') ? navigate('/marvel') : navigate('/dc');
+    navigate(-1);
   }
 
   return (
