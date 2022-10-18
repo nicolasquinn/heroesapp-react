@@ -1,6 +1,7 @@
 import { useReducer } from "react"
 import { AuthContext } from "./AuthContext"
 import { authReducer } from "./authReducer"
+import { types } from "../types/types"
 
 const initialState = {
     logged: false,
@@ -8,10 +9,28 @@ const initialState = {
 
 export const AuthProvider = ({ children }) => {
 
-    const [ state, dispatch ] = useReducer( authReducer, initialState );
+    const [ authState, dispatch ] = useReducer( authReducer, initialState );
+
+    const login = ( name = '' ) => {
+
+      const action = {
+        type: types.login,
+        payload: {
+          id: Date.now(),
+          name,
+        },
+      }
+
+      dispatch(action);
+
+    }
+
 
   return (
-    <AuthContext.Provider value={{ }}>
+    <AuthContext.Provider value={{
+      ...authState,
+      login,
+    }}>
         { children }
     </AuthContext.Provider>
   )
